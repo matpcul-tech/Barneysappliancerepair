@@ -272,33 +272,14 @@
 
     /* ══ WARRANTY ══ */
     .warranty-section { background: var(--white); padding: 7rem 2rem; }
-    .warranty-inner { display: grid; grid-template-columns: 1fr 1.3fr; gap: 6rem; align-items: center; }
+    .warranty-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 6rem; align-items: center; }
     @media (max-width: 860px) { .warranty-inner { grid-template-columns: 1fr; gap: 3rem; } }
 
-    /* CSS warranty visual */
-    .warranty-visual {
-      position: relative; height: 420px;
-      background: linear-gradient(145deg, #f0ece4 0%, #e8e0d4 50%, #ddd5c8 100%);
-      border: 1px solid rgba(140,112,64,0.15);
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      overflow: hidden;
-    }
-    .wv-ring {
-      position: absolute; border-radius: 50%;
-      border: 1px solid rgba(140,112,64,0.15);
-    }
-    .wv-r1 { width: 180px; height: 180px; animation: pulse 3s ease-in-out infinite; }
-    .wv-r2 { width: 280px; height: 280px; border-color: rgba(140,112,64,0.08); animation: pulse 3s ease-in-out infinite 0.8s reverse; }
-    .wv-r3 { width: 380px; height: 380px; border-color: rgba(140,112,64,0.05); animation: pulse 3s ease-in-out infinite 1.6s; }
-    .wv-shield { font-size: 5rem; position: relative; z-index: 2; animation: pulse 4s ease-in-out infinite; }
-    .wv-label {
-      position: absolute; bottom: 2rem;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1rem; font-style: italic;
-      color: var(--gold); opacity: 0.7; letter-spacing: 1px;
-    }
-    @keyframes pulse { 0%,100%{opacity:0.6;transform:scale(1);} 50%{opacity:1;transform:scale(1.05);} }
+    .warranty-photo-wrap { position: relative; overflow: hidden; border-radius: 2px; }
+    .warranty-photo { width:100%; display:block; object-fit:cover; aspect-ratio: 4/3; filter: brightness(0.8) saturate(0.85); }
+    .warranty-photo-wrap::after { content:''; position:absolute; inset:0; border: 1px solid rgba(140,112,64,0.2); pointer-events:none; }
+    /* Gold corner accents */
+    .warranty-photo-wrap::before { content:''; position:absolute; top:12px; left:12px; width:40px; height:40px; border-top:2px solid var(--gold2); border-left:2px solid var(--gold2); z-index:2; pointer-events:none; }
 
     .warranty-content {}
     .warranty-badge { display:inline-flex; align-items:center; gap:0.6rem; background:rgba(140,112,64,0.08); border:1px solid rgba(140,112,64,0.2); padding:0.6rem 1rem; font-size:0.68rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:1.75rem; }
@@ -440,13 +421,13 @@
   <div class="hero-right">
     <div class="hero-photo-wrap">
       <img class="hero-photo"
-        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=85&auto=format"
+        src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=85&auto=format"
         alt="Luxury stainless steel kitchen"/>
     </div>
     <div class="hero-photo-divider"></div>
     <div class="hero-photo-wrap">
       <img class="hero-photo"
-        src="https://images.unsplash.com/photo-1556909048-f473e6d57b8e?w=1200&q=85&auto=format"
+        src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=1200&q=85&auto=format"
         alt="Modern kitchen appliances"/>
     </div>
   </div>
@@ -495,7 +476,7 @@
         <div style="display:grid; grid-template-columns:1fr 1fr; border-bottom:1px solid var(--border);">
           <div class="svc-card" style="border-right:1px solid var(--border);">
             <img class="svc-img"
-              src="https://images.unsplash.com/photo-1626806819282-2c1dc01a6e4b?w=800&q=85&auto=format"
+              src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d91?w=800&q=85&auto=format"
               alt="Front load washing machine stainless"/>
             <div class="svc-overlay"></div>
             <div class="svc-content">
@@ -505,7 +486,7 @@
           </div>
           <div class="svc-card">
             <img class="svc-img"
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=85&auto=format"
+              src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=85&auto=format"
               alt="Stainless steel kitchen range"/>
             <div class="svc-overlay"></div>
             <div class="svc-content">
@@ -518,7 +499,7 @@
         <div style="display:grid; grid-template-columns:1fr 1fr;">
           <div class="svc-card" style="border-right:1px solid var(--border);">
             <img class="svc-img"
-              src="https://images.unsplash.com/photo-1556909048-f473e6d57b8e?w=800&q=85&auto=format"
+              src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=800&q=85&auto=format"
               alt="Built-in dishwasher stainless"/>
             <div class="svc-overlay"></div>
             <div class="svc-content">
@@ -528,7 +509,7 @@
           </div>
           <div class="svc-card">
             <img class="svc-img"
-              src="https://images.unsplash.com/photo-1556909190-eccf4d8b0c4b?w=800&q=85&auto=format"
+              src="https://images.unsplash.com/photo-1583845112203-29329902332e?w=800&q=85&auto=format"
               alt="Modern kitchen appliances stainless"/>
             <div class="svc-overlay"></div>
             <div class="svc-content">
@@ -549,12 +530,12 @@
 <div class="photo-feature">
   <div class="feat-photo-wrap" data-label="Stainless Steel">
     <img class="feat-photo"
-      src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80&auto=format"
+      src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80&auto=format"
       alt="Stainless steel kitchen"/>
   </div>
   <div class="feat-photo-wrap" data-label="Luxury Kitchen">
     <img class="feat-photo"
-      src="https://images.unsplash.com/photo-1556909048-f473e6d57b8e?w=600&q=80&auto=format"
+      src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=600&q=80&auto=format"
       alt="Luxury kitchen appliances"/>
   </div>
   <div class="feat-photo-wrap" data-label="Professional Grade">
@@ -573,7 +554,7 @@
 <section class="about-strip" id="promise">
   <div class="about-photo-wrap">
     <img class="about-photo"
-      src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1000&q=85&auto=format"
+      src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1000&q=85&auto=format"
       alt="Beautiful stainless steel kitchen with granite counters"/>
     <div class="about-photo-overlay"></div>
   </div>
@@ -617,21 +598,16 @@
 <section class="warranty-section">
   <div class="container">
     <div class="warranty-inner">
-
-      <!-- Pure CSS visual — no image, always loads -->
-      <div class="warranty-visual reveal">
-        <div class="wv-ring wv-r1"></div>
-        <div class="wv-ring wv-r2"></div>
-        <div class="wv-ring wv-r3"></div>
-        <div class="wv-shield">🛡️</div>
-        <div class="wv-label">Guaranteed Work</div>
+      <div class="warranty-photo-wrap reveal">
+        <img class="warranty-photo"
+          src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=1000&q=85&auto=format"
+          alt="Luxury stainless steel kitchen appliances"/>
       </div>
-
       <div class="warranty-content reveal d2">
         <div class="warranty-badge">🛡️ Backed by Barney's</div>
         <div class="warranty-number">1</div>
         <div class="warranty-title">Year Warranty on <em>Every Repair</em></div>
-        <p class="warranty-desc">Every repair we complete is backed by a full 12-month warranty on both parts and labor. If the same issue comes back, Barney returns at no charge — no questions, no hassle.</p>
+        <p class="warranty-desc">Every repair we complete is backed by a full 12-month warranty on both parts and labor. If the same issue comes back, we return at no charge — no questions, no hassle.</p>
         <a href="#contact" class="btn-dark">Book with Confidence →</a>
       </div>
     </div>
@@ -866,3 +842,4 @@ Submitted via Barney's website`
 </script>
 </body>
 </html>
+
